@@ -31,7 +31,7 @@ class Movies extends Component {
       <React.Fragment>
         <div>
           {this.state.movies.length === 0 ? (
-            <p>Cargando aplicación...</p>
+            <p>Loading page...</p>
           ) : (
             this.state.movies.map((movie, title) => (
               <CardMovies key={movie.name + title} dataMovie={movie} />
