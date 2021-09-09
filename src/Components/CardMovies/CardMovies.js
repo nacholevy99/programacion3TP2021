@@ -4,14 +4,17 @@ import "./CardMovies.css";
 class CardMovies extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+
+    };
   }
 
   render() {
     // console.log(this.props);
     return (
       <div className="movie-card">
-        <img src={this.props.dataMovie.backdrop_path} alt="movieposter" />
+        {console.log(this.props.dataMovie.poster_path)}
+        <img src={`https://image.tmdb.org/t/p/w500/${this.props.dataMovie.backdrop_path} alt="imagen"`} />
         <h4>{this.props.dataMovie.title}</h4>
         <p>
           {`${this.props.dataMovie.release_date} - 
