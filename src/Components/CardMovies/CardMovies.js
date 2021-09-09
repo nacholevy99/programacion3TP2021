@@ -18,7 +18,7 @@ class CardMovies extends Component {
           ${this.props.dataMovie.original_language} -
           ${this.props.dataMovie.overview}`}{" "}
         </p>
-        <button>Borrar</button>
+        <button className="btn-danger">Borrar</button>
       </div>
     );
   }

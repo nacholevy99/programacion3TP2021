@@ -10,7 +10,7 @@ class NavBar extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className='header bg-dark text-white'>
+        <header className="header bg-dark text-white">
           <h1>Movie Finder</h1>
           <section className="options">
             <form action="">

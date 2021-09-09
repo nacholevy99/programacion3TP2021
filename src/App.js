@@ -4,6 +4,7 @@ import reactDom from "react-dom";
 import "./App.css";
 import Movies from "./Components/Movies/Movies";
 import NavBar from "./Components/NavBar/NavBar";
+import Footer from "./Components/Footer/Footer";
 
 //Aca vamos a ir agregnado todos los componentes para visualizarlos en la pagina
 function App() {
@@ -23,18 +24,12 @@ function App() {
             </section>
           </article>
         </section>
-      </main>
-      <footer>
-        <ul className="team">
-          <li>Nombre integrante 1</li>
-          <li>Nombre integrante 2</li>
-          <li>Nombre integrante 3</li>
-        </ul>
-      </footer>
-      <div classNameName="home">
+      </main>  
+      <div>
         <div>
           <Movies />
         </div>
+        <Footer/>
       </div>
     </React.Fragment>
   );
