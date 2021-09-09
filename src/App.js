@@ -3,22 +3,13 @@ import React from "react";
 import reactDom from "react-dom";
 import "./App.css";
 import Movies from "./Components/Movies/Movies";
+import NavBar from "./Components/NavBar/NavBar";
 
 //Aca vamos a ir agregnado todos los componentes para visualizarlos en la pagina
 function App() {
   return (
     <React.Fragment>
-      <header>
-        <h1>Título/ Nombre de la app</h1>
-        <section>
-          <form action="">
-            <input type="text" name="search" id="" placeholder="Search" />
-            <button type="submit">
-              <i className="fas fa-search"></i>
-            </button>
-          </form>
-        </section>
-      </header>
+     <NavBar />
       <main>
         <button type="button">Cargar más tarjetas</button>
         <section className="card-container">
