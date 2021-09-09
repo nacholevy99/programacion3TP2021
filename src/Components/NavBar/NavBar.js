@@ -1,3 +1,4 @@
+import "./NavBar.css";
 import React, { Component } from "react";
 
 class NavBar extends Component {
@@ -9,9 +10,9 @@ class NavBar extends Component {
   render() {
     return (
       <React.Fragment>
-        <header>
-          <h1>Título/ Nombre de la app</h1>
-          <section>
+        <header className='header bg-dark text-white'>
+          <h1>Movie Finder</h1>
+          <section className="options">
             <form action="">
               <input type="text" name="search" id="" placeholder="Search" />
               <button type="submit">

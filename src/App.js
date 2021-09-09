@@ -11,7 +11,7 @@ function App() {
     <React.Fragment>
      <NavBar />
       <main>
-        <button type="button">Cargar más tarjetas</button>
+        <button type="loadmore">Cargar más tarjetas</button>
         <section className="card-container">
           <article>
             <section className="navigation">
