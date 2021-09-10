@@ -6,11 +6,11 @@ import Movies from "./Components/Movies/Movies";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 
-//Aca vamos a ir agregnado todos los componentes para visualizarlos en la pagina
+//Aca vamos a ir agregando todos los componentes para visualizarlos en la pagina
 function App() {
   return (
     <React.Fragment>
-     <NavBar />
+      <NavBar />
       <main>
         <button type="loadmore">Cargar más tarjetas</button>
         <section className="card-container">
@@ -20,16 +20,16 @@ function App() {
                 <i className="fas fa-chevron-left"></i>
                 <i className="fas fa-chevron-right"></i>
               </div>
-              <i className="far fa-window-close"></i>
             </section>
           </article>
         </section>
-      </main>  
+      </main>
+
       <div>
         <div>
           <Movies />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </React.Fragment>
   );

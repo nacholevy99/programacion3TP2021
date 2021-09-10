@@ -4,12 +4,11 @@ import "./Footer.css";
 function Footer() {
   return (
     <React.Fragment>
-      <footer className="footer">
-        <ul className="footer">
-          <li>Nombre integrante 1</li>
-          <li>Nombre integrante 2</li>
-          <li>Nombre integrante 3</li>
-        </ul>
+      <footer className="footer bg-dark text-white">
+        <p className="footernames">
+          Integrantes del grupo: Juan Ignacio Levy, Camila Escontrela y Nicolas
+          Gigena
+        </p>
       </footer>
     </React.Fragment>
   );

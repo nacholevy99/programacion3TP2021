@@ -1,4 +1,10 @@
 .footer {
   display: flex;
   justify-content: space-around;
+  margin: auto;
+}
+
+.footernames {
+  margin:auto;
+  padding: 10px
 }

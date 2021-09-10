@@ -1,6 +1,16 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin: auto;
+}
+
+.headertext {
+  margin-left: 10px;
+}
+
+.subheader {
+  font-size: medium;
+  margin: auto;
 }
 
 .loadmore {

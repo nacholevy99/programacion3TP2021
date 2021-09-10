@@ -26,6 +26,16 @@ class Movies extends Component {
       .catch((error) => console.log(error));
   }
 
+  //Metodo borrar
+  deleteCard(id) {
+    let moviesLeft = this.state.movies.filter((movie) => {
+      return movie.id !== id;
+    });
+    this.setState({
+      movies: moviesLeft,
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -34,7 +44,12 @@ class Movies extends Component {
             <p>Loading page...</p>
           ) : (
             this.state.movies.map((movie, title) => (
-              <CardMovies key={movie.name + title} dataMovie={movie} />
+              <CardMovies
+                key={movie.name + title}
+                dataMovie={movie}
+                //Metodo borrar
+                delete={(idDelete) => this.deleteCard(idDelete)}
+              />
             ))
           )}
         </div>

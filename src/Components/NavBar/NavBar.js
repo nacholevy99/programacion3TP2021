@@ -11,7 +11,8 @@ class NavBar extends Component {
     return (
       <React.Fragment>
         <header className="header bg-dark text-white">
-          <h1>Movie Finder</h1>
+          <h1 className="headertext">Movie Finder</h1>
+          <h2 className="subheader">Las peliculas que mas te gustan, a tu alcance</h2>
           <section className="options">
             <form action="">
               <input type="text" name="search" id="" placeholder="Search" />
