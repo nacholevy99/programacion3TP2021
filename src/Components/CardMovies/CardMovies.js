@@ -12,9 +12,7 @@ class CardMovies extends Component {
     // console.log(this.props);
     return (
       <React.Fragment>
-        <div>
-          <Search/>
-        </div>
+        
       <div className="movie-card">
         {console.log(this.props.dataMovie.backdrop_path)}
         <img

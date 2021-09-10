@@ -1,11 +1,10 @@
 // Aca vamos a ir importando los componentes y todo lo que queramos usar en este archivo
 import React from "react";
-import reactDom from "react-dom";
 import "./App.css";
 import Movies from "./Components/Movies/Movies";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
-
+import Search from "./Components/Search/Search";
 //Aca vamos a ir agregando todos los componentes para visualizarlos en la pagina
 function App() {
   return (
@@ -26,6 +25,9 @@ function App() {
       </main>
 
       <div>
+      <div>
+          <Search/>
+        </div>
         <div>
           <Movies />
         </div>
