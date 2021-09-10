@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import "./Carousel.css";
 
 function Carousel() {
@@ -6,3 +6,4 @@ function Carousel() {
 }
 
 export default Carousel;
+*/
