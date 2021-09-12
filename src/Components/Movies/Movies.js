@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CardMovies from "../CardMovies/CardMovies";
+import "./Movies.css";
 
 class Movies extends Component {
   constructor() {
@@ -39,7 +40,7 @@ class Movies extends Component {
   render() {
     return (
       <React.Fragment>
-        <div>
+        <div className='movie-card-container'>
           {this.state.movies.length === 0 ? (
             <p>Loading page...</p>
           ) : (
@@ -49,6 +50,7 @@ class Movies extends Component {
                 dataMovie={movie}
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}
+                className='movie-card-object'
               />
             ))
           )}

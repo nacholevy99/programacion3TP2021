@@ -29,7 +29,7 @@ function App() {
           <Search/>
         </div>
         <div>
-          <Movies />
+          <Movies className='movie-card-container'/>
         </div>
         <Footer />
       </div>
