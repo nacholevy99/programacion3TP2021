@@ -1,67 +1,91 @@
-import { Carousel } from 'react-carousel-minimal';
+import { Carousel } from "react-carousel-minimal";
 
 //CAROUSEL SACADO DE INTERNET REACT
 function Carousel1() {
- const data = [
+  const data = [
     {
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-      caption: "San Francisco"
+      image:
+        "https://image.freepik.com/free-psd/movie-clapper-board-mock-up-frame_23-2148470111.jpg",
+      caption: "Las peliculas del momento",
     },
     {
-      image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
-      caption: "Scotland"
+      image:
+        "https://image.freepik.com/free-psd/top-view-retro-film-strip-popcorn_23-2148470115.jpg",
+      caption: "Todas en un lugar",
     },
     {
-      image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-      caption: "Darjeeling"
+      image:
+        "https://cdn.pixabay.com/photo/2019/03/21/02/51/deadpool-4070071_960_720.jpg",
+      caption: "Superheroes",
     },
     {
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-      caption: "San Francisco"
+      image:
+        "https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928_960_720.jpg",
+      caption: "Fantasia",
     },
     {
-      image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-      caption: "Scotland"
+      image:
+        "https://cdn.pixabay.com/photo/2016/11/14/05/21/children-1822688_960_720.jpg",
+      caption: "Historias de vida",
     },
     {
-      image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
-      caption: "Darjeeling"
+      image:
+        "https://cdn.pixabay.com/photo/2017/11/24/10/43/ticket-2974645_960_720.jpg",
+      caption: "Contemporaneas",
     },
     {
-      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
-      caption: "San Francisco"
+      image:
+        "https://cdn.pixabay.com/photo/2018/10/26/11/14/tv-3774381_960_720.jpg",
+      caption: "Mira desde tu casa",
     },
     {
-      image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
-      caption: "Scotland"
+      image:
+        "https://areajugones.sport.es/wp-content/uploads/2021/07/naruto.jpeg",
+      caption: "Anime",
     },
     {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Darjeeling"
-    }
+      image:
+        "https://sm.ign.com/t/ign_nl/gallery/t/the-25-bes/the-25-best-horror-movies_2smr.1080.jpg",
+      caption: "Terror",
+    },
+    {
+      image:
+        "https://cdn.pixabay.com/photo/2020/02/18/19/26/suspense-4860506_960_720.jpg",
+      caption: "Suspenso",
+    },
+    {
+      image:
+        "https://images.everydayhealth.com/images/emotional-health/depression/funny-movies-that-help-lift-your-depression-rm-1440x810.jpg",
+      caption: "Comedia",
+    },
   ];
 
   const captionStyle = {
-    fontSize: '2em',
-    fontWeight: 'bold',
-  }
+    fontSize: "2em",
+    fontWeight: "bold",
+  };
   const slideNumberStyle = {
-    fontSize: '20px',
-    fontWeight: 'bold',
-  }
+    fontSize: "20px",
+    fontWeight: "bold",
+  };
   return (
     <div className="App">
-      <div style={{ textAlign: "left" }}>
-        <br/>
-        <h2>Las peliculas que mas te gustan a tu alcance</h2>
-        <p>En MovieFinder buscamos traerte las peliculas mas novedosas del momento</p>
-        <div style={{
-          padding: "0 20px"
-        }}>
+      <div style={{ textAlign: "center" }}>
+        <br />
+        <h2>Las peliculas que mas te gustan a tu alcance!</h2>
+        <p>
+          En MovieFinder buscamos traerte las peliculas mas novedosas del
+          momento
+        </p>
+        <div
+          style={{
+            padding: "0 20px",
+          }}
+        >
           <Carousel
             data={data}
             time={2000}
-            width="850px"
+            width="1250px"
             height="500px"
             captionStyle={captionStyle}
             radius="10px"
@@ -78,7 +102,7 @@ function Carousel1() {
             thumbnailWidth="100px"
             style={{
               textAlign: "center",
-              maxWidth: "850px",
+              maxWidth: "1250px",
               maxHeight: "500px",
               margin: "40px auto",
             }}
