@@ -49,6 +49,10 @@ class Movies extends Component {
     });
   }
 
+cargarMas(){
+  
+}
+
   render() {
     return (
       <React.Fragment>
@@ -72,6 +76,9 @@ class Movies extends Component {
             ))
           )}
         </div>
+
+<button onClick= {()=> this.cargarMas() }>Cargar Más</button>
+
       </React.Fragment>
     );
   }
