@@ -8,7 +8,7 @@ class CardMovies extends Component {
   }
 
   render() {
-    // console.log(this.props);
+    console.log(this.props.index); //Esto me dice el número de Orden en que está esta película en el Array que le pedioms a TMDB
     return (
       <React.Fragment>
 
@@ -20,12 +20,11 @@ class CardMovies extends Component {
           </div>
           <button
           className="btn-danger borrar"
-          onClick={() => this.props.delete(this.props.dataMovie.id)}
-        >
+          onClick={() => this.props.delete(this.props.dataMovie.id)}>
           X
-        </button>
+          </button>
         </div>        
-        {console.log(this.props.dataMovie.backdrop_path)}
+        {/**console.log(this.props.dataMovie.backdrop_path)**/}
         <img
           src={`https://image.tmdb.org/t/p/w500${this.props.dataMovie.backdrop_path}`} alt='imagen'
         />
