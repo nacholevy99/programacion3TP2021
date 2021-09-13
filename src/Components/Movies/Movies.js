@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CardMovies from "../CardMovies/CardMovies";
+import Search from "../Search/Search";
 import "./Movies.css";
 
 class Movies extends Component {
@@ -7,6 +8,7 @@ class Movies extends Component {
     super();
     this.state = {
       movies: [],
+      initialMovies: [],
     };
   }
 
@@ -37,10 +39,23 @@ class Movies extends Component {
     });
   }
 
+  //Metodo Serach
+  filterMovies(textFilter) {
+    let moviesFiltered = this.state.movies.filter((movie) => {
+      return movie.name.toLowerCase().includes(textFilter.toLowerCase());
+    });
+    this.setState({
+      movies: moviesFiltered,
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
-        <div className='movie-card-container'>
+        <div>
+          <Search filterMovies={(texto) => this.filterMovies(texto)} />
+        </div>
+        <div className="movie-card-container">
           {this.state.movies.length === 0 ? (
             <p>Loading page...</p>
           ) : (
@@ -50,7 +65,7 @@ class Movies extends Component {
                 dataMovie={movie}
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}
-                className='movie-card-object'
+                className="movie-card-object"
               />
             ))
           )}

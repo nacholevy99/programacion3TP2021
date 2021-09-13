@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./CardMovies.css";
-import Search from "../Search/Search";
 
 class CardMovies extends Component {
   constructor(props) {

@@ -13,13 +13,30 @@ class Search extends Component {
     evento.preventDefault();
   }
 
+  //Metodo para controlar cambios
+
+  changesCheck(evento) {
+    this.setState(
+      {
+        filterBy: evento.target.value,
+      },
+      () => this.props.filterMovies(this.state.filterBy)
+    );
+  }
+
   render() {
     return (
       <React.Fragment>
-        <form>
-          <label>Busca tu pelicula: </label>
-          <br/>
-          <input type="text" />
+        <form onSubmit={(e) => this.evitarEnviar(e)}>
+          <label for="nombre">Busca tu pelicula: </label>
+          <br />
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            onChange={(e) => this.changesCheck(e)}
+            value={this.state.filterBy}
+          />
         </form>
       </React.Fragment>
     );

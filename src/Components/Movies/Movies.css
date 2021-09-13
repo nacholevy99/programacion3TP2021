@@ -1,11 +1,9 @@
-.movie-card-container{
-    
-  display:flex;
-  flex-wrap:wrap;
+.movie-card-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-
 }
-.movie-card{
-    width:24%;
-    padding:auto;
+.movie-card {
+  width: 24%;
+  padding: auto;
 }
