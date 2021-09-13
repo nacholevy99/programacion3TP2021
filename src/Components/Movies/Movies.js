@@ -56,6 +56,7 @@ class Movies extends Component {
           <Search filterMovies={(texto) => this.filterMovies(texto)} />
         </div>
         <div className="movie-card-container">
+          {console.log(this.state.movies)}
           {this.state.movies.length === 0 ? (
             <p>Loading page...</p>
           ) : (
