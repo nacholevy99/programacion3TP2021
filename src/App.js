@@ -26,6 +26,7 @@ function App() {
 
       <div>
         <div>
+          <h2> Peliculas destacadas </h2> 
           <Movies className="movie-card-container" />
         </div>
         <Footer />
