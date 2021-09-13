@@ -13,7 +13,7 @@ class Movies extends Component {
   }
 
   componentDidMount() {
-    console.log("Component loaded");
+    {/**console.log("Component loaded");**/}
     let url =
       "https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=1";
     fetch(url)
@@ -67,6 +67,7 @@ class Movies extends Component {
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}
                 className="movie-card-object"
+                index={this.state.movies.indexOf(movie)}
               />
             ))
           )}
