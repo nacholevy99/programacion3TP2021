@@ -67,7 +67,7 @@ class Movies extends Component {
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}
                 className="movie-card-object"
-                index={this.state.movies.indexOf(movie)}
+                //index={this.state.movies.indexOf(movie)}
               />
             ))
           )}
