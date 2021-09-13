@@ -42,7 +42,7 @@ class Movies extends Component {
   //Metodo Serach
   filterMovies(textFilter) {
     let moviesFiltered = this.state.movies.filter((movie) => {
-      return movie.name.toLowerCase().includes(textFilter.toLowerCase());
+      return movie.original_title.toLowerCase().includes(textFilter.toLowerCase());
     });
     this.setState({
       movies: moviesFiltered,
