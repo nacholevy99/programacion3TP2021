@@ -14,16 +14,7 @@ function App() {
       <Carousel />
       <main>
         <button type="loadmore">Cargar más tarjetas</button>
-        <section className="card-container">
-          <article>
-            <section className="navigation">
-              <div>
-                <i className="fas fa-chevron-left"></i>
-                <i className="fas fa-chevron-right"></i>
-              </div>
-            </section>
-          </article>
-        </section>
+       
       </main>
 
       <div>
