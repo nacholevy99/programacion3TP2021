@@ -9,6 +9,7 @@ class Movies extends Component {
     this.state = {
       movies: [],
       initialMovies: [],
+      nextUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=2'
     };
   }
 
@@ -50,8 +51,19 @@ class Movies extends Component {
   }
 
 cargarMas(){
-  
+    let url = this.state.nextUrl
+    fetch(url)
+    .then(respuesta =>{
+        return respuesta.json()
+    })
+    .then((data) =>{
+        this.setState({
+            movies : this.state.movies.concat(data.results),
+            nextUrl : data.info  
+        })
+    })
 }
+
 
   render() {
     return (

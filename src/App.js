@@ -12,10 +12,7 @@ function App() {
     <React.Fragment>
       <NavBar />
       <Carousel />
-      <main>
-        <button type="loadmore">Cargar más tarjetas</button>
-       
-      </main>
+      
 
       <div>
         <div>
