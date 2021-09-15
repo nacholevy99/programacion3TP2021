@@ -59,17 +59,26 @@ cargarMas(){
     .then((data) =>{
         this.setState({
             movies : this.state.movies.concat(data.results),
-            nextUrl : data.info  
+            nextUrl : 'https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=' + (data.page + 1)
         })
+        console.log(data.page)
     })
+}
+
+modoLista(){  
+  let modo = false;
+  let id = document.querySelector('div.movie-card-container')
+  console.log(id)
 }
 
 
   render() {
     return (
       <React.Fragment>
-        <div>
-          <Search filterMovies={(texto) => this.filterMovies(texto)} />
+        <div className="movies-filters d-flex justify-content-between">  
+          <div>
+            <Search filterMovies={(texto) => this.filterMovies(texto)} />
+          </div>
         </div>
         <div className="movie-card-container">
           {console.log(this.state.movies)}
@@ -82,7 +91,6 @@ cargarMas(){
                 dataMovie={movie}
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}
-                className="movie-card-object"
                 //index={this.state.movies.indexOf(movie)}
               />
             ))
