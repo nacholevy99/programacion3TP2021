@@ -50,6 +50,7 @@ class Movies extends Component {
     });
   }
 
+  //Metodo cargarMas
 cargarMas(){
     let url = this.state.nextUrl
     fetch(url)

@@ -13,10 +13,13 @@ function App() {
       <NavBar />
       <Carousel />
       
-
+    
       <div>
         <div>
-          <h2> Peliculas destacadas </h2> 
+          <br />
+          <br />
+          <br />
+          <h2 className="featured"> Peliculas destacadas </h2> 
           <Movies className="movie-card-container" />
         </div>
         <Footer />
