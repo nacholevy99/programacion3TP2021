@@ -4,6 +4,10 @@ body {
   display: flex;
 }
 
+.featured{
+  text-align: center;
+  
+}
 /*====== Media-Queries ======*/
 @media only screen 
     and (device-width : 375px) 

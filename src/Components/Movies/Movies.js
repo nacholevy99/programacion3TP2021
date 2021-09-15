@@ -97,9 +97,9 @@ modoLista(){
             ))
           )}
         </div>
-
-<button onClick= {()=> this.cargarMas() }>Cargar Más</button>
-
+<div className="loadbtn">
+<button className="btn-success" onClick= {()=> this.cargarMas() }>Cargar Más Peliculas</button>
+</div>
       </React.Fragment>
     );
   }

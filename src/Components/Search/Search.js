@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Search.css"
 
 //Esto no esta terminado el search
 class Search extends Component {
@@ -27,6 +28,7 @@ class Search extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="formsearch">
         <form onSubmit={(e) => this.evitarEnviar(e)}>
           <label for="nombre">Busca tu pelicula: </label>
           <br />
@@ -38,6 +40,7 @@ class Search extends Component {
             value={this.state.filterBy}
           />
         </form>
+        </div>
       </React.Fragment>
     );
   }
