@@ -41,7 +41,7 @@ class Movies extends Component {
     });
   }
 
-  //Metodo Serach
+  //Metodo Search
   filterMovies(textFilter) {
     let moviesFiltered = this.state.initialMovies.filter((movie) => {
       return movie.original_title
