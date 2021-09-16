@@ -4,7 +4,7 @@ import "./App.css";
 import Movies from "./Components/Movies/Movies";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
-import Carousel from "./Components/Carousel/Carousel"
+import Carousel from "./Components/Carousel/Carousel";
 
 //Aca vamos a ir agregando todos los componentes para visualizarlos en la pagina
 function App() {
@@ -12,14 +12,13 @@ function App() {
     <React.Fragment>
       <NavBar />
       <Carousel />
-      
-    
+
       <div>
         <div>
           <br />
           <br />
           <br />
-          <h2 className="featured"> Peliculas destacadas </h2> 
+          <h2 className="featured"> Peliculas destacadas </h2>
           <Movies className="movie-card-container" />
         </div>
         <Footer />

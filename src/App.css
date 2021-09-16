@@ -4,23 +4,12 @@ body {
   display: flex;
 }
 
-.featured{
+.featured {
   text-align: center;
-  
 }
 /*====== Media-Queries ======*/
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) { 
-
-      .featured{
-        text-align: center;
-      }
-
-
-    }
-  
-
-
-
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .featured {
+    text-align: center;
+  }
+}

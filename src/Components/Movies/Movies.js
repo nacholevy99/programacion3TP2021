@@ -9,12 +9,12 @@ class Movies extends Component {
     this.state = {
       movies: [],
       initialMovies: [],
-      nextUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=2'
+      nextUrl:
+        "https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=2",
     };
   }
 
   componentDidMount() {
-    {/**console.log("Component loaded");**/}
     let url =
       "https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=1";
     fetch(url)
@@ -43,7 +43,9 @@ class Movies extends Component {
   //Metodo Serach
   filterMovies(textFilter) {
     let moviesFiltered = this.state.movies.filter((movie) => {
-      return movie.original_title.toLowerCase().includes(textFilter.toLowerCase());
+      return movie.original_title
+        .toLowerCase()
+        .includes(textFilter.toLowerCase());
     });
     this.setState({
       movies: moviesFiltered,
@@ -51,32 +53,33 @@ class Movies extends Component {
   }
 
   //Metodo cargarMas
-cargarMas(){
-    let url = this.state.nextUrl
+  cargarMas() {
+    let url = this.state.nextUrl;
     fetch(url)
-    .then(respuesta =>{
-        return respuesta.json()
-    })
-    .then((data) =>{
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((data) => {
         this.setState({
-            movies : this.state.movies.concat(data.results),
-            nextUrl : 'https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=' + (data.page + 1)
-        })
-        console.log(data.page)
-    })
-}
+          movies: this.state.movies.concat(data.results),
+          nextUrl:
+            "https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=" +
+            (data.page + 1),
+        });
+        console.log(data.page);
+      });
+  }
 
-modoLista(){  
-  let modo = false;
-  let id = document.querySelector('div.movie-card-container')
-  console.log(id)
-}
-
+  modoLista() {
+    let modo = false;
+    let id = document.querySelector("div.movie-card-container");
+    console.log(id);
+  }
 
   render() {
     return (
       <React.Fragment>
-        <div className="movies-filters d-flex justify-content-between">  
+        <div className="movies-filters d-flex justify-content-between">
           <div>
             <Search filterMovies={(texto) => this.filterMovies(texto)} />
           </div>
@@ -92,14 +95,15 @@ modoLista(){
                 dataMovie={movie}
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}
-                //index={this.state.movies.indexOf(movie)}
               />
             ))
           )}
         </div>
-<div className="loadbtn">
-<button className="btn-success" onClick= {()=> this.cargarMas() }>Cargar Más Peliculas</button>
-</div>
+        <div className="loadbtn">
+          <button className="btn-success" onClick={() => this.cargarMas()}>
+            Cargar Más Peliculas
+          </button>
+        </div>
       </React.Fragment>
     );
   }

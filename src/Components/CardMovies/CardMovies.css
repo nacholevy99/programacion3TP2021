@@ -21,6 +21,20 @@
   box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 }
 
-.sinopsis{
+.sinopsis {
   font-size: medium;
+}
+
+.more {
+  color: blue;
+}
+.more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
