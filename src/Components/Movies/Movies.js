@@ -25,6 +25,7 @@ class Movies extends Component {
         console.log(data);
         this.setState({
           movies: data.results,
+          initialMovies: data.results,
         });
       })
       .catch((error) => console.log(error));
@@ -42,7 +43,7 @@ class Movies extends Component {
 
   //Metodo Serach
   filterMovies(textFilter) {
-    let moviesFiltered = this.state.movies.filter((movie) => {
+    let moviesFiltered = this.state.initialMovies.filter((movie) => {
       return movie.original_title
         .toLowerCase()
         .includes(textFilter.toLowerCase());
