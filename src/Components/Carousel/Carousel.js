@@ -1,4 +1,5 @@
 import { Carousel } from "react-carousel-minimal";
+import "./Carousel.css"
 
 //CAROUSEL SACADO DE INTERNET REACT
 function Carousel1() {

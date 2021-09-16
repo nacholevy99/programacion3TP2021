@@ -27,9 +27,9 @@ class Search extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      
         <div className="formsearch">
-        <form onSubmit={(e) => this.evitarEnviar(e)}>
+        <form className="form1" onSubmit={(e) => this.evitarEnviar(e)}>
           <label for="nombre">Busca tu pelicula: </label>
           <br />
           <input
@@ -41,7 +41,7 @@ class Search extends Component {
           />
         </form>
         </div>
-      </React.Fragment>
+      
     );
   }
 }
