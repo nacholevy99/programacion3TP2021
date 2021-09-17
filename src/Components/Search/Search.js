@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Search.css"
 
-//Esto no esta terminado el search
 class Search extends Component {
   constructor() {
     super();

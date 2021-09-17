@@ -86,13 +86,13 @@ class Movies extends Component {
           </div>
         </div>
         <div className="movie-card-container">
-          {console.log(this.state.movies)}
+          
           {this.state.movies.length === 0 ? (
             <p>Loading page...</p>
           ) : (
             this.state.movies.map((movie, title) => (
               <CardMovies
-                key={movie.name + title}
+                key={title}
                 dataMovie={movie}
                 //Metodo borrar
                 delete={(idDelete) => this.deleteCard(idDelete)}

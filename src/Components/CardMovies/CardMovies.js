@@ -39,7 +39,6 @@ class CardMovies extends Component {
   }
 
   render() {
-    console.log(this.props.index); //Esto me dice el número de Orden en que está esta película en el Array que le pedioms a TMDB
     return (
       <React.Fragment>
         <div
