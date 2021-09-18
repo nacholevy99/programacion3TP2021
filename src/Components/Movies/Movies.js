@@ -92,7 +92,7 @@ class Movies extends Component {
           <div>
             <Search filterMovies={(texto) => this.filterMovies(texto)} />
           </div>
-          <div className="movies-view d-flex">
+          <div className="movies-view">
             <button className="m-2" onClick={() => this.modoLista()}>
               <img src="/assets/img/view-list.png" className="h-100"></img>
             </button>

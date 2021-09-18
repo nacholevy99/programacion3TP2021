@@ -13,3 +13,15 @@ body {
     text-align: center;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  #carousel{
+    height:auto;
+    display:none;
+  }
+  #thumbnail-div{
+    display:none;
+  }
+
+
+}

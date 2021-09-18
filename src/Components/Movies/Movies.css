@@ -6,6 +6,7 @@
 
 .movies-view button{
   height:40px;
+  display:flex;
 }
 
 .movie-card-container-list {
@@ -32,4 +33,70 @@
 .loadbtn {
   text-align: center;
   padding: 10px;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .movies-view{
+    display:none;
+  }
+  .movie-card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .movie-card {
+    width: 100%;
+    padding: auto;
+    height:350px;
+    transition:0.5s;
+  }
+
+  .movie-card-mas{
+    height:700px;
+    transition:0.5s;
+  }
+
+  .movie-card .arrow-card{
+    height:40px;
+  }
+
+  .movie-card button{
+    height:100%;
+  }
+  .movie-card button img{
+    height:100%;
+  }
+  .movie-card-container .movie-card img {
+    display:block;
+    height:0px;
+    width:auto;
+    transition:0.5s;
+  }
+  .movie-card-container .movie-card-mas img {
+    display:block;
+    height:125px;
+    width:auto;
+    transition:0.5s;
+  }
+  .movie-card h4{
+    margin:1.5%;
+    font-size:16px;
+    text-decoration: underline;
+    width: 100%;
+    height:10%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+  }
+  .movie-card p.sinopsis{
+    height:30%;
+    overflow-y:hidden;
+  }
+  .movie-card-mas p.sinopsis{
+    height:30%;
+    overflow-y:scroll;
+  }
+
 }

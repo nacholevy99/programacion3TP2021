@@ -18,11 +18,15 @@ class CardMovies extends Component {
         viewMore: false,
         text: "Ver más",
       });
+      let movieCard = document.getElementById(this.props.dataMovie.id)
+      movieCard.classList.remove("movie-card-mas")
     } else {
       this.setState({
         viewMore: true,
         text: "ver menos",
       });
+      let movieCard = document.getElementById(this.props.dataMovie.id)
+      movieCard.classList.add("movie-card-mas")
     }
   }
 
@@ -44,7 +48,7 @@ class CardMovies extends Component {
         <div
           className={`movie-card ${this.state.selected ? "active" : ""}`}
           onDoubleClick={() => this.selected()}
-          id="movie-card"
+          id={`${this.props.dataMovie.id}`}
         >
           <div className="arrow-card mb-2 w-100 p-1 d-flex justify-content-between">
             <div>
@@ -74,7 +78,7 @@ class CardMovies extends Component {
             <ol> Popularidad: {this.props.dataMovie.popularity} </ol>
             <ol> Votos: {this.props.dataMovie.vote_count} </ol>
           </p>
-          <p className="more" onClick={() => this.viewMore()}>
+          <p className="more" onClick={() => this.viewMore()} id="ver-mas-text">
             {this.state.text}
           </p>
         </div>
