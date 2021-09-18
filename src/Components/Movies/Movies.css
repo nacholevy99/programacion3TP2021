@@ -3,6 +3,27 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.movies-view button{
+  height:40px;
+}
+
+.movie-card-container-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.movie-card-container-list .movie-card {
+  width:100%;
+  transition: 0.5s;
+}
+
+.movie-card-container-list .movie-card img {
+  display:none;
+}
+
 .movie-card {
   width: 24%;
   padding: auto;

@@ -72,8 +72,16 @@ class Movies extends Component {
   }
 
   modoLista() {
-    let modo = false;
-    let id = document.querySelector("div.movie-card-container");
+    let id = document.getElementById("movie-card-container-id")
+    id.classList.remove("movie-card-container")
+    id.classList.add("movie-card-container-list")
+    console.log(id);
+  }
+
+  modoCuadro() {
+    let id = document.getElementById("movie-card-container-id")
+    id.classList.remove("movie-card-container-list")
+    id.classList.add("movie-card-container")
     console.log(id);
   }
 
@@ -84,8 +92,16 @@ class Movies extends Component {
           <div>
             <Search filterMovies={(texto) => this.filterMovies(texto)} />
           </div>
+          <div className="movies-view d-flex">
+            <button className="m-2" onClick={() => this.modoLista()}>
+              <img src="/assets/img/view-list.png" className="h-100"></img>
+            </button>
+            <button className="m-2" onClick={() => this.modoCuadro()}>
+              <img src="/assets/img/view-square.png" className="h-100"></img>
+            </button>
+          </div>
         </div>
-        <div className="movie-card-container">
+        <div className="movie-card-container" id="movie-card-container-id">
           
           {this.state.movies.length === 0 ? (
             <p>Loading page...</p>

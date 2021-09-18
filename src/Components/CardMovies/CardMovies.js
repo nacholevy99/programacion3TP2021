@@ -44,6 +44,7 @@ class CardMovies extends Component {
         <div
           className={`movie-card ${this.state.selected ? "active" : ""}`}
           onDoubleClick={() => this.selected()}
+          id="movie-card"
         >
           <div className="arrow-card mb-2 w-100 p-1 d-flex justify-content-between">
             <div>
