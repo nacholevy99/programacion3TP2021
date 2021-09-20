@@ -65,6 +65,7 @@ class Movies extends Component {
       .then((data) => {
         this.setState({
           movies: this.state.movies.concat(data.results),
+          initialMovies: this.state.movies.concat(data.results),
           nextUrl:
             "https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=" +
             (data.page + 1),
