@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; 
 import CardMovies from "../CardMovies/CardMovies";
 import Search from "../Search/Search";
 import "./Movies.css";
@@ -13,6 +13,7 @@ class Movies extends Component {
         "https://api.themoviedb.org/3/movie/popular?api_key=5aa9fce9092f6cf9a542c91ac1a6f84e&language=en-US&page=2",
     };
   }
+
 
   componentDidMount() {
     let url =
@@ -38,6 +39,7 @@ class Movies extends Component {
     });
     this.setState({
       movies: moviesLeft,
+      initialMovies: moviesLeft
     });
   }
 
